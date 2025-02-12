@@ -15,3 +15,12 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+let swagLabsTestData: any = {}
+before(() => {
+    cy.fixture('swagLabs/testData').then((data) => {
+        swagLabsTestData = data
+    })
+})
+
+export {swagLabsTestData}

@@ -7,5 +7,6 @@ export default defineConfig({
   e2e: {
     specPattern: ['src/e2e/post-deployment-tests/**/*.feature', 'src/e2e/ci-tests/**/*.ts'],
     supportFile: 'src/support/e2e.ts',
+    fixturesFolder: 'src/fixtures', 
   },
 });
