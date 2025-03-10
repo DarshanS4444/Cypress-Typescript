@@ -8,5 +8,10 @@ export default defineConfig({
     specPattern: ['src/e2e/post-deployment-tests/**/*.feature', 'src/e2e/ci-tests/**/*.ts'],
     supportFile: 'src/support/e2e.ts',
     fixturesFolder: 'src/fixtures', 
+    env: {
+      TAGS: '',
+      environment: 'prod',
+      product: 'swaglabs'
+    },
   },
-});
+})

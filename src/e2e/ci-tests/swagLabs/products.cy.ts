@@ -2,7 +2,9 @@ import { swagLabsTestData } from "../../../support/e2e"
 
 describe('Products functionality tests', () => {
     beforeEach(() => {
-        cy.visit('https://www.saucedemo.com/')
+        cy.getBaseURL().then((baseURL) => {
+            cy.visit(baseURL)
+        })
         cy.get('#user-name').type(swagLabsTestData.username)
         cy.get('#password').type(swagLabsTestData.password)
         cy.get('[data-test="login-button"]').click()
@@ -12,7 +14,7 @@ describe('Products functionality tests', () => {
         cy.get('.shopping_cart_link').click()
         cy.get('.inventory_item_name').should('have.text','Sauce Labs Backpack')
     })
-    it('Order onesie to cart and complete payment', () => {
+    it('Add onesie to cart and complete payment', () => {
         cy.get('#add-to-cart-sauce-labs-onesie').click()
         cy.get('.shopping_cart_link').click()
         cy.get('#checkout').click()
