@@ -1,0 +1,10 @@
+{
+    "swaglabs": {
+        "prod": {
+            "BaseURL": "https://www.saucedemo.com/"
+        },
+        "dev": {
+            "BaseURL": "https://www.dev-saucedemo.com/"
+        }   
+    }
+}
