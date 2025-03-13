@@ -1,27 +1,27 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "moduleResolution": "Node16",
-    "module": "Node16",
-    "allowJs": true,
-    "outDir": "../../dist/out-tsc",
-    "types": ["cypress", "node"],
-    "sourceMap": false,
-    "target": "ESNext",
-    "lib": ["esnext", "dom"],
-    "strict": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "esModuleInterop": true,          // Ensures that default imports work as expected
+    "moduleResolution": "Node16",     // Correct module resolution for modern Node.js
+    "module": "Node16",               // Ensures that Node16 style modules are used
+    "allowJs": true,                  // Allows JS files to be compiled
+    "outDir": "../../dist/out-tsc",   // Specifies where the compiled files will be placed
+    "types": ["cypress", "node"],     // Ensures that types for Cypress and Node.js are available
+    "sourceMap": false,               // Disables source maps (can be enabled if needed)
+    "target": "ESNext",               // Sets the target JavaScript version to ESNext
+    "lib": ["esnext", "dom"],         // Specifies which libraries should be included (ESNext & DOM)
+    "strict": true,                   // Enables strict mode in TypeScript
+    "skipLibCheck": true,             // Skips library checks (useful for large projects)
+    "forceConsistentCasingInFileNames": true  // Ensures consistent file casing in imports
   },
   "include": [
-    "**/*.ts",
-    "**/*.js",
-    "cypress.config.ts",
-    "**/*.cy.ts",
-    "*.cy.ts",
-    "**/*.cy.tsx",
-    "**/*.cy.js",
-    "**/*.cy.jsx",
-    "**/*.d.ts"
+    "**/*.ts",           // Includes all .ts files
+    "**/*.js",           // Includes all .js files
+    "cypress.config.ts", // Includes cypress configuration files
+    "**/*.cy.ts",        // Includes Cypress test files with .cy.ts extension
+    "*.cy.ts",           // Includes files with the .cy.ts extension in root
+    "**/*.cy.tsx",       // Includes Cypress test files with .cy.tsx extension
+    "**/*.cy.js",        // Includes Cypress test files with .cy.js extension
+    "**/*.cy.jsx",       // Includes Cypress test files with .cy.jsx extension
+    "**/*.d.ts"          // Includes definition files
   ]
 }

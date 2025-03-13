@@ -10,9 +10,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^22.0.0",
-    "cypress": "^14.0.2",
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^14.2.0",
     "cypress-xpath": "^2.0.1",
-    "typescript": "^5.7.3"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }
