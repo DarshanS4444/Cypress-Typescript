@@ -21,6 +21,15 @@ before(() => {
     cy.fixture('swagLabs/testData').then((data) => {
         swagLabsTestData = data
     })
+    cy.fixture('swagLabs/testData').then((data) => {
+        swagLabsTestData = data
+    })
+})
+beforeEach(() => {
+    cy.clearDataContext()
+    cy.getBaseURL().then((baseURL) => {
+      cy.visit(baseURL)
+    })
 })
 
 export {swagLabsTestData}

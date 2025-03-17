@@ -1,4 +1,7 @@
 /// <reference types="cypress" />
+
+import { dataContext } from "../resources/dataContext"
+
 // Below are few format examples
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
@@ -26,6 +29,11 @@ declare global {
        * @returns {Chainable<string>} The URL corresponding to the provided key.
        */
       getBaseURL(): Chainable<string>
+
+      /**
+       * Clear the Data from test data context
+       */
+      clearDataContext(): Chainable<void>
     }
    
   }
@@ -36,4 +44,8 @@ Cypress.Commands.add('getBaseURL', () => {
   cy.readFile('./src/resources/environments.json').then((envConfig) => {
     return envConfig[product.toLowerCase()][env.toLowerCase()]['BaseURL']
   })
+})
+Cypress.Commands.add('clearDataContext', () => {
+  cy.log('Clearing all Data from context')
+  dataContext.clearData()
 })

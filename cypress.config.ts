@@ -21,6 +21,13 @@ async function setupNodeEvents(
   return config
 }
 export default defineConfig({
+  "chromeWebSecurity": false,
+  defaultCommandTimeout: 4000,
+  viewportWidth: 1280,
+  viewportHeight: 720,
+  pageLoadTimeout: 120000,
+  requestTimeout: 10000,
+  responseTimeout: 30000,
   e2e: {
     specPattern: ['src/e2e/post-deployment-tests/**/*.feature', 'src/e2e/ci-tests/**/*.ts'],
     setupNodeEvents,
@@ -29,7 +36,7 @@ export default defineConfig({
     env: {
       TAGS: '',
       environment: 'prod',
-      product: 'swaglabs'
+      product: ''
     },
   },
 })
