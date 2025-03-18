@@ -7,12 +7,12 @@
             "BaseURL": "https://www.dev-saucedemo.com/"
         }   
     },
-    "ajio": {
+    "swiggy": {
         "prod": {
-            "BaseURL": "https://www.ajio.com/"
+            "BaseURL": "https://www.swiggy.com/"
         },
         "dev": {
-            "BaseURL": "https://www.dev-ajio.com/"
+            "BaseURL": "https://www.swiggy.com/"
         }   
     }
 }
