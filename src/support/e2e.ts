@@ -15,7 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-
+import 'cypress-xpath'
 let swagLabsTestData: any = {}
 before(() => {
     cy.fixture('swagLabs/testData').then((data) => {
