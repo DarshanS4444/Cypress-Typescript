@@ -1,6 +1,7 @@
 import { defineConfig } from "cypress";
 import { addCucumberPreprocessorPlugin } from '@badeball/cypress-cucumber-preprocessor'
 import { preprocessor } from "@badeball/cypress-cucumber-preprocessor/browserify"
+import pdf from 'pdf-parse'
 
 async function setupNodeEvents(
   on: Cypress.PluginEvents,
@@ -18,6 +19,14 @@ async function setupNodeEvents(
   if (config.env.TAGS) {
     config.env.TAGS = config.env.TAGS.split(',')
   }
+
+  on('task', {
+    parsePdf({ filePath }: { filePath: any }) {
+      return pdf(filePath).then((data: any) => {
+        return data.text
+      })
+    },
+  })
   return config
 }
 export default defineConfig({
