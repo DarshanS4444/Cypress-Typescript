@@ -28,6 +28,10 @@ export default defineConfig({
   pageLoadTimeout: 120000,
   requestTimeout: 10000,
   responseTimeout: 30000,
+  reporter: '../../node_modules/mocha-multi-reporters',
+  reporterOptions: {
+    configFile: 'reporter-config.json',
+  },
   e2e: {
     specPattern: ['src/e2e/post-deployment-tests/**/*.feature', 'src/e2e/ci-tests/**/*.ts'],
     setupNodeEvents,

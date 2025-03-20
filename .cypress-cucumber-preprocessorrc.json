@@ -1,0 +1,7 @@
+{
+    "json": {
+      "enabled": true,
+      "output": "./src/reports/cucumberReport.json",
+      "formatter": "./cucumber-json-formatter"
+    }
+  }

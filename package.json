@@ -12,9 +12,12 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
     "@cypress/browserify-preprocessor": "^3.0.2",
-    "cypress": "^14.2.0",
+    "cypress": "^13.17.0",
     "cypress-xpath": "^2.0.1",
+    "multiple-cucumber-html-reporter": "^3.9.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "mocha-junit-reporter": "^2.2.1",
+    "mocha-multi-reporters": "^1.5.1"
   }
 }
